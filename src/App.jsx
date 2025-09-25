@@ -181,7 +181,7 @@ const Portfolio = () => {
 
             {/* View CV Button */}
             <a
-              href="/cv.pdf"
+              href="/CV_Josephat Leviathan Andifa.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-sky-400 to-blue-600 px-8 py-3 rounded-full font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl inline-block"
