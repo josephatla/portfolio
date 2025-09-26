@@ -3,6 +3,7 @@ import { ChevronDown, Code, Database, Globe, Mail, Phone, MapPin, Github, Linked
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap, FaPython, FaJava, FaPhp } from "react-icons/fa";
 import { SiC, SiDotnet, SiMysql, SiCucumber } from "react-icons/si";
 import lordshopImage from "./assets/shop.jpg";
+import profile from "./assets/profile.jpeg";
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -234,7 +235,7 @@ const Portfolio = () => {
                 <div className="w-80 h-80 mx-auto bg-gradient-to-br from-sky-400 to-blue-600 rounded-full p-1">
                   <div className="w-full h-full bg-slate-900 rounded-full flex items-center justify-center">
                     <img
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face"
+                      src={profile}
                       alt="Profile"
                       className="w-72 h-72 rounded-full object-cover"
                     />
