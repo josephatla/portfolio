@@ -4,6 +4,11 @@ import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap, FaPython, FaJava, FaPhp
 import { SiC, SiDotnet, SiMysql, SiCucumber } from "react-icons/si";
 import lordshopImage from "./assets/shop.jpg";
 import profile from "./assets/profile.jpeg";
+import p1 from './assets/floracare.jpeg';
+import p2 from './assets/codereeng.jpeg'
+import p3 from './assets/diamondcut.jpeg'
+import p4 from './assets/toyoda.jpg'
+import p5 from './assets/itung.jpeg'
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -58,14 +63,14 @@ const Portfolio = () => {
       title: 'FloraCare',
       description: 'FloraCare is a deep learning-powered web app that detects plant diseases from leaf images using TensorFlow, Flask, and React.',
       tech: ['React', 'Flask', 'TensorFlow', 'Python'],
-      image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=250&fit=crop',
+      image: p1,
       demo: 'https://github.com/josephatla/FloraCare/'
     },
     {
       title: 'LMS Code Refactoring',
       description: 'Improved the structure and readability of a Learning Management System through systematic code refactoring.',
       tech: ['Java', 'Refactoring', 'Clean Code'],
-      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop',
+      image: p2,
       demo: 'https://github.com/josephatla/AOL-Project-Kelompok-4'
     },
     {
@@ -79,7 +84,7 @@ const Portfolio = () => {
       title: 'DiamondCut Motors',
       description: 'A premium car dealership website showcasing luxury vehicles using HTML, CSS, JS.',
       tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
-      image: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&h=250&fit=crop',
+      image: p3,
       demo: 'https://diamond-cut-motors-two.vercel.app/',
       github: 'https://github.com/josephatla/DiamondCut-Motors'
     },
@@ -87,14 +92,14 @@ const Portfolio = () => {
       title: 'Toyoda Fiberglass',
       description: 'A company website for fiberglass products, built with React to provide a modern and responsive user experience.',
       tech: ['React', 'JavaScript', 'Responsive Design', 'Corporate'],
-      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=250&fit=crop',
+      image: p4,
       demo: 'https://www.toyodafibreglass.com/'
     },
     {
       title: 'I-Tung Expense Tracker',
       description: 'A React-based web app for tracking income and expenses, helping users manage their personal finances with ease.',
       tech: ['React', 'JavaScript', 'Financial Management', 'UI/UX'],
-      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=250&fit=crop',
+      image: p5,
       demo: 'https://i-tung-expense-tracker.vercel.app/',
       github: 'https://github.com/Brrendenn/I-Tung-Expense-Tracker'
     }
@@ -163,11 +168,14 @@ const Portfolio = () => {
           <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto px-4 animate-in slide-in-from-bottom duration-1000 delay-700">
             Passionate about software engineering and web development, solving problems with clean and efficient code
           </p>
-          <div className="space-x-4 animate-in slide-in-from-bottom duration-1000 delay-1000">
+          <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 
+animate-in slide-in-from-bottom duration-1000 delay-1000 items-center justify-center">
+
             {/* View Work Button */}
             <button
               onClick={() => scrollToSection('projects')}
-              className="bg-gradient-to-r from-sky-400 to-blue-600 px-8 py-3 rounded-full font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-gradient-to-r from-sky-400 to-blue-600 px-8 py-3 rounded-full font-semibold 
+    hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl w-full md:w-auto"
             >
               View My Work
             </button>
@@ -175,7 +183,8 @@ const Portfolio = () => {
             {/* Get In Touch Button */}
             <button
               onClick={() => scrollToSection('contact')}
-              className="border border-gray-500 px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
+              className="border border-gray-500 px-8 py-3 rounded-full font-semibold 
+    hover:bg-white hover:text-slate-900 transition-all duration-300 w-full md:w-auto"
             >
               Get In Touch
             </button>
@@ -185,7 +194,8 @@ const Portfolio = () => {
               href="/CV_Josephat Leviathan Andifa.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-sky-400 to-blue-600 px-8 py-3 rounded-full font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl inline-block"
+              className="bg-gradient-to-r from-sky-400 to-blue-600 px-8 py-3 rounded-full font-semibold 
+    hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl w-full md:w-auto text-center"
             >
               View CV
             </a>
