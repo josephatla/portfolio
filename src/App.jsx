@@ -99,7 +99,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="bg-slate-900 text-white h-[100dvh]">
+    <div className="bg-slate-900 text-white min-h-screen">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-slate-900/90 backdrop-blur-sm z-50 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
