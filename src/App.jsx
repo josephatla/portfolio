@@ -21,7 +21,7 @@ const Portfolio = () => {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     );
 
     const sections = document.querySelectorAll('section[id]');
@@ -99,7 +99,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="bg-slate-900 text-white min-h-screen">
+    <div className="bg-slate-900 text-white h-[100dvh]">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-slate-900/90 backdrop-blur-sm z-50 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -147,7 +147,7 @@ const Portfolio = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <section id="hero" className="h-[100dvh] flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-sky-900/20 to-blue-900/20"></div>
         <div className="text-center z-10 animate-in fade-in duration-1000 px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent animate-in slide-in-from-bottom duration-1000 delay-300">
