@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Code, Database, Globe, Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Menu, X } from 'lucide-react';
+import { ChevronDown, Mail, Phone, MapPin, Github, Linkedin, Menu, X } from 'lucide-react';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap, FaPython, FaJava, FaPhp } from "react-icons/fa";
 import { SiC, SiDotnet, SiMysql, SiCucumber } from "react-icons/si";
 
@@ -8,7 +8,6 @@ const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState({});
 
-  // Intersection Observer for scroll animations
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -51,33 +50,34 @@ const Portfolio = () => {
     { name: 'Cucumber', icon: <SiCucumber className="w-8 h-8 text-green-500" /> }
   ];
 
+  // FIXED: Use direct paths instead of imports
   const projects = [
     {
       title: 'FloraCare',
       description: 'FloraCare is a deep learning-powered web app that detects plant diseases from leaf images using TensorFlow, Flask, and React.',
       tech: ['React', 'Flask', 'TensorFlow', 'Python'],
-      image: '/assets/floracare.jpeg', // Changed
+      image: '/assets/floracare.jpeg',
       demo: 'https://github.com/josephatla/FloraCare/'
     },
     {
       title: 'LMS Code Refactoring',
       description: 'Improved the structure and readability of a Learning Management System through systematic code refactoring.',
       tech: ['Java', 'Refactoring', 'Clean Code'],
-      image: '/assets/codereeng.jpeg', // Changed
+      image: '/assets/codereeng.jpeg',
       demo: 'https://github.com/josephatla/AOL-Project-Kelompok-4'
     },
     {
       title: 'Lord Card Shop',
       description: 'A web app for managing card data, built with ASP.NET Web Forms and software design patterns for better structure.',
       tech: ['ASP.NET', 'C#', 'Web Forms', 'Design Patterns'],
-      image: '/assets/shop.jpg', // Changed
+      image: '/assets/shop.jpg',
       demo: 'https://github.com/josephatla/Lord-Card-Shop'
     },
     {
       title: 'DiamondCut Motors',
       description: 'A premium car dealership website showcasing luxury vehicles using HTML, CSS, JS.',
       tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
-      image: '/assets/diamondcut.jpeg', // Changed
+      image: '/assets/diamondcut.jpeg',
       demo: 'https://diamond-cut-motors-two.vercel.app/',
       github: 'https://github.com/josephatla/DiamondCut-Motors'
     },
@@ -85,14 +85,14 @@ const Portfolio = () => {
       title: 'Toyoda Fiberglass',
       description: 'A company website for fiberglass products, built with React to provide a modern and responsive user experience.',
       tech: ['React', 'JavaScript', 'Responsive Design', 'Corporate'],
-      image: '/assets/toyoda.jpg', // Changed
+      image: '/assets/toyoda.jpg',
       demo: 'https://www.toyodafibreglass.com/'
     },
     {
       title: 'I-Tung Expense Tracker',
       description: 'A React-based web app for tracking income and expenses, helping users manage their personal finances with ease.',
       tech: ['React', 'JavaScript', 'Financial Management', 'UI/UX'],
-      image: '/assets/itung.jpeg', // Changed
+      image: '/assets/itung.jpeg',
       demo: 'https://i-tung-expense-tracker.vercel.app/',
       github: 'https://github.com/Brrendenn/I-Tung-Expense-Tracker'
     }
@@ -108,21 +108,20 @@ const Portfolio = () => {
               JosephatLA
             </div>
 
-            {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
               {['hero', 'about', 'skills', 'projects', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
-                  className={`capitalize transition-all duration-300 hover:text-cyan-300 ${activeSection === section ? 'text-cyan-300 border-b-2 border-cyan-300' : ''
-                    }`}
+                  className={`capitalize transition-all duration-300 hover:text-cyan-300 ${
+                    activeSection === section ? 'text-cyan-300 border-b-2 border-cyan-300' : ''
+                  }`}
                 >
                   {section === 'hero' ? 'Home' : section}
                 </button>
               ))}
             </div>
 
-            {/* Mobile Menu Button */}
             <button
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -131,7 +130,6 @@ const Portfolio = () => {
             </button>
           </div>
 
-          {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="md:hidden bg-slate-800 rounded-lg mt-2 p-4 animate-in slide-in-from-top duration-300">
               {['hero', 'about', 'skills', 'projects', 'contact'].map((section) => (
@@ -151,7 +149,7 @@ const Portfolio = () => {
       {/* Hero Section */}
       <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-sky-900/20 to-blue-900/20"></div>
-        <div className="text-center z-10 animate-in fade-in duration-1000">
+        <div className="text-center z-10 animate-in fade-in duration-1000 px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent animate-in slide-in-from-bottom duration-1000 delay-300">
             Josephat Leviathan Andifa
           </h1>
@@ -161,41 +159,30 @@ const Portfolio = () => {
           <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto px-4 animate-in slide-in-from-bottom duration-1000 delay-700">
             Passionate about software engineering and web development, solving problems with clean and efficient code
           </p>
-          <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 
-animate-in slide-in-from-bottom duration-1000 delay-1000 items-center justify-center">
-
-            {/* View Work Button */}
+          <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 animate-in slide-in-from-bottom duration-1000 delay-1000 items-center justify-center">
             <button
               onClick={() => scrollToSection('projects')}
-              className="bg-gradient-to-r from-sky-400 to-blue-600 px-8 py-3 rounded-full font-semibold 
-    hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl w-full md:w-auto"
+              className="bg-gradient-to-r from-sky-400 to-blue-600 px-8 py-3 rounded-full font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl w-full md:w-auto"
             >
               View My Work
             </button>
-
-            {/* Get In Touch Button */}
             <button
               onClick={() => scrollToSection('contact')}
-              className="border border-gray-500 px-8 py-3 rounded-full font-semibold 
-    hover:bg-white hover:text-slate-900 transition-all duration-300 w-full md:w-auto"
+              className="border border-gray-500 px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300 w-full md:w-auto"
             >
               Get In Touch
             </button>
-
-            {/* View CV Button */}
             <a
               href="/CV_Josephat Leviathan Andifa.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-sky-400 to-blue-600 px-8 py-3 rounded-full font-semibold 
-    hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl w-full md:w-auto text-center"
+              className="bg-gradient-to-r from-sky-400 to-blue-600 px-8 py-3 rounded-full font-semibold hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl w-full md:w-auto text-center"
             >
               View CV
             </a>
           </div>
         </div>
 
-        {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <ChevronDown className="w-8 h-8 text-gray-400" />
         </div>
@@ -236,11 +223,15 @@ animate-in slide-in-from-bottom duration-1000 delay-1000 items-center justify-ce
 
               <div className="text-center">
                 <div className="w-80 h-80 mx-auto bg-gradient-to-br from-sky-400 to-blue-600 rounded-full p-1">
-                  <div className="w-full h-full bg-slate-900 rounded-full flex items-center justify-center">
+                  <div className="w-full h-full bg-slate-900 rounded-full flex items-center justify-center overflow-hidden">
                     <img
                       src="/assets/profile.jpeg"
                       alt="Profile"
                       className="w-72 h-72 rounded-full object-cover"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.parentElement.innerHTML = '<div class="text-gray-400 text-center">Image not available</div>';
+                      }}
                     />
                   </div>
                 </div>
@@ -269,7 +260,6 @@ animate-in slide-in-from-bottom duration-1000 delay-1000 items-center justify-ce
                 </div>
               ))}
             </div>
-
           </div>
         </div>
       </section>
@@ -294,6 +284,9 @@ animate-in slide-in-from-bottom duration-1000 delay-1000 items-center justify-ce
                       src={project.image}
                       alt={project.title}
                       className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                      onError={(e) => {
+                        e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23334155" width="400" height="300"/%3E%3Ctext fill="%239ca3af" font-family="sans-serif" font-size="18" dy="10.5" font-weight="bold" x="50%25" y="50%25" text-anchor="middle"%3EImage Not Available%3C/text%3E%3C/svg%3E';
+                      }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
                   </div>
@@ -315,7 +308,6 @@ animate-in slide-in-from-bottom duration-1000 delay-1000 items-center justify-ce
                       ))}
                     </div>
 
-                    {/* Buttons pinned at bottom */}
                     <div className="mt-auto flex gap-2">
                       {project.demo && (
                         <a
@@ -349,8 +341,6 @@ animate-in slide-in-from-bottom duration-1000 delay-1000 items-center justify-ce
       {/* Footer */}
       <footer id="contact" className="bg-slate-900 border-t border-slate-800 py-8">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8 text-center md:text-left">
-
-          {/* Left: Brand / Copyright */}
           <div>
             <h3 className="text-xl font-bold bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent">
               JosephatLA
@@ -358,13 +348,10 @@ animate-in slide-in-from-bottom duration-1000 delay-1000 items-center justify-ce
             <p className="text-gray-500 text-sm mt-2">
               © {new Date().getFullYear()} Josephat Leviathan Andifa. All rights reserved.
             </p>
-            <br />
           </div>
 
-          {/* Middle: Quick Links */}
           <div></div>
 
-          {/* Right: Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-3">Contact</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
@@ -382,7 +369,6 @@ animate-in slide-in-from-bottom duration-1000 delay-1000 items-center justify-ce
               </li>
             </ul>
 
-            {/* Socials */}
             <div className="flex space-x-4 mt-4 justify-center md:justify-start">
               <a href="https://github.com/josephatla" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-300 transition-colors">
                 <Github className="w-5 h-5" />
