@@ -2,13 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { ChevronDown, Code, Database, Globe, Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Menu, X } from 'lucide-react';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap, FaPython, FaJava, FaPhp } from "react-icons/fa";
 import { SiC, SiDotnet, SiMysql, SiCucumber } from "react-icons/si";
-import lordshopImage from "/assets/shop.jpg";
-import profile from "/assets/profile.jpeg";
-import p1 from '/assets/floracare.jpeg';
-import p2 from '/assets/codereeng.jpeg'
-import p3 from '/assets/diamondcut.jpeg'
-import p4 from '/assets/toyoda.jpg'
-import p5 from '/assets/itung.jpeg'
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -63,28 +56,28 @@ const Portfolio = () => {
       title: 'FloraCare',
       description: 'FloraCare is a deep learning-powered web app that detects plant diseases from leaf images using TensorFlow, Flask, and React.',
       tech: ['React', 'Flask', 'TensorFlow', 'Python'],
-      image: p1,
+      image: '/assets/floracare.jpeg', // Changed
       demo: 'https://github.com/josephatla/FloraCare/'
     },
     {
       title: 'LMS Code Refactoring',
       description: 'Improved the structure and readability of a Learning Management System through systematic code refactoring.',
       tech: ['Java', 'Refactoring', 'Clean Code'],
-      image: p2,
+      image: '/assets/codereeng.jpeg', // Changed
       demo: 'https://github.com/josephatla/AOL-Project-Kelompok-4'
     },
     {
       title: 'Lord Card Shop',
       description: 'A web app for managing card data, built with ASP.NET Web Forms and software design patterns for better structure.',
       tech: ['ASP.NET', 'C#', 'Web Forms', 'Design Patterns'],
-      image: lordshopImage,
+      image: '/assets/shop.jpg', // Changed
       demo: 'https://github.com/josephatla/Lord-Card-Shop'
     },
     {
       title: 'DiamondCut Motors',
       description: 'A premium car dealership website showcasing luxury vehicles using HTML, CSS, JS.',
       tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
-      image: p3,
+      image: '/assets/diamondcut.jpeg', // Changed
       demo: 'https://diamond-cut-motors-two.vercel.app/',
       github: 'https://github.com/josephatla/DiamondCut-Motors'
     },
@@ -92,14 +85,14 @@ const Portfolio = () => {
       title: 'Toyoda Fiberglass',
       description: 'A company website for fiberglass products, built with React to provide a modern and responsive user experience.',
       tech: ['React', 'JavaScript', 'Responsive Design', 'Corporate'],
-      image: p4,
+      image: '/assets/toyoda.jpg', // Changed
       demo: 'https://www.toyodafibreglass.com/'
     },
     {
       title: 'I-Tung Expense Tracker',
       description: 'A React-based web app for tracking income and expenses, helping users manage their personal finances with ease.',
       tech: ['React', 'JavaScript', 'Financial Management', 'UI/UX'],
-      image: p5,
+      image: '/assets/itung.jpeg', // Changed
       demo: 'https://i-tung-expense-tracker.vercel.app/',
       github: 'https://github.com/Brrendenn/I-Tung-Expense-Tracker'
     }
@@ -245,7 +238,7 @@ animate-in slide-in-from-bottom duration-1000 delay-1000 items-center justify-ce
                 <div className="w-80 h-80 mx-auto bg-gradient-to-br from-sky-400 to-blue-600 rounded-full p-1">
                   <div className="w-full h-full bg-slate-900 rounded-full flex items-center justify-center">
                     <img
-                      src={profile}
+                      src="/assets/profile.jpeg"
                       alt="Profile"
                       className="w-72 h-72 rounded-full object-cover"
                     />
