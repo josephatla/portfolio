@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { ChevronDown, Code, Database, Globe, Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Menu, X } from 'lucide-react';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap, FaPython, FaJava, FaPhp } from "react-icons/fa";
 import { SiC, SiDotnet, SiMysql, SiCucumber } from "react-icons/si";
-import lordshopImage from "./assets/shop.jpg";
-import profile from "./assets/profile.jpeg";
-import p1 from './assets/floracare.jpeg';
-import p2 from './assets/codereeng.jpeg'
-import p3 from './assets/diamondcut.jpeg'
-import p4 from './assets/toyoda.jpg'
-import p5 from './assets/itung.jpeg'
+import lordshopImage from "/assets/shop.jpg";
+import profile from "/assets/profile.jpeg";
+import p1 from '/assets/floracare.jpeg';
+import p2 from '/assets/codereeng.jpeg'
+import p3 from '/assets/diamondcut.jpeg'
+import p4 from '/assets/toyoda.jpg'
+import p5 from '/assets/itung.jpeg'
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('hero');
